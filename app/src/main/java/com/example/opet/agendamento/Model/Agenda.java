@@ -1,25 +1,27 @@
 package com.example.opet.agendamento.Model;
 
 import java.util.Date;
+
+import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
 /**
  * Created by opet on 09/05/2018.
  */
-
+@Entity
 public class Agenda {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String nomeCompromisso;
     private String descricao;
-    private Date data;
+    private Long data;
     private String prioridade;
-    private Boolean flRealizado;
+    private int flRealizado;
 
     public Agenda() {
     }
 
-    public Agenda(int id, String nomeCompromisso, String descricao, Date data, String prioridade, Boolean flRealizado) {
+    public Agenda(int id, String nomeCompromisso, String descricao, Long data, String prioridade, int flRealizado) {
         this.id = id;
         this.nomeCompromisso = nomeCompromisso;
         this.descricao = descricao;
@@ -52,11 +54,11 @@ public class Agenda {
         this.descricao = descricao;
     }
 
-    public Date getData() {
+    public Long getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(Long data) {
         this.data = data;
     }
 
@@ -68,11 +70,11 @@ public class Agenda {
         this.prioridade = prioridade;
     }
 
-    public Boolean getFlRealizado() {
+    public int getFlRealizado() {
         return flRealizado;
     }
 
-    public void setFlRealizado(Boolean flRealizado) {
+    public void setFlRealizado(int flRealizado) {
         this.flRealizado = flRealizado;
     }
 }

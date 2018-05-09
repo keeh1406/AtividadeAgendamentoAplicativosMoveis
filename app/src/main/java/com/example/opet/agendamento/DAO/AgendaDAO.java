@@ -5,9 +5,7 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
-import android.support.annotation.NonNull;
 import com.example.opet.agendamento.Model.Agenda;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,10 +24,10 @@ public interface AgendaDAO {
     Agenda findByAgenda(int id);
 
     @Query("SELECT * from Agenda WHERE data in (:agendaData)")
-    List<Agenda> loadAgendaByDatas(Date[] agendaData);
+    List<Agenda> loadAgendaByDatas(Long[] agendaData);
 
-    @Query ("SELECT * FROM Agenda Where FlRealizado LIKE 'false'")
-    List<Agenda> loadAgendaByflRealizado(String[] agendaflRealizado);
+    @Query ("SELECT * FROM Agenda Where FlRealizado = 0")
+    List<Agenda> loadAgendaByflRealizado();
 
     @Insert
     long insertAgenda(Agenda agenda);

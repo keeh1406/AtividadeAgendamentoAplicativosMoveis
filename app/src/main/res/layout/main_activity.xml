@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="25sp"
+        android:id="@+id/textWelcome"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:onClick="deslogar"
+        android:text="Sair"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <GridLayout
+        android:layout_weight="1"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="130dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:rowCount="4"
+        android:columnCount="1">
+
+        <Button
+            android:onClick="carregaItemMenu"
+            android:text="Inserir Agendamento"
+            android:id="@+id/btnInserir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            android:onClick="carregaItemMenu1"
+            android:text="Lista de agendamentos por data."
+            android:id="@+id/btnListarAgendaData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="carregaItemMenu2"
+            android:text="Lista todos os agendamentos."
+            android:id="@+id/btnListarAgenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:onClick="carregaItemMenu3"
+            android:text="Lista de Agendamentos não realizados."
+            android:id="@+id/btnListarAgendaNaoRealizado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </GridLayout>
+</LinearLayout>
