@@ -14,16 +14,18 @@ public class Agenda {
     private String descricao;
     private Date data;
     private String prioridade;
+    private Boolean flRealizado;
 
     public Agenda() {
     }
 
-    public Agenda(int id, String nomeCompromisso, String descricao, Date data, String prioridade) {
+    public Agenda(int id, String nomeCompromisso, String descricao, Date data, String prioridade, Boolean flRealizado) {
         this.id = id;
         this.nomeCompromisso = nomeCompromisso;
         this.descricao = descricao;
         this.data = data;
         this.prioridade = prioridade;
+        this.flRealizado = flRealizado;
     }
 
     public int getId() {
@@ -64,5 +66,13 @@ public class Agenda {
 
     public void setPrioridade(String prioridade) {
         this.prioridade = prioridade;
+    }
+
+    public Boolean getFlRealizado() {
+        return flRealizado;
+    }
+
+    public void setFlRealizado(Boolean flRealizado) {
+        this.flRealizado = flRealizado;
     }
 }
