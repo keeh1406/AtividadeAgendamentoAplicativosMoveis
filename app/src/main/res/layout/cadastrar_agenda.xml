@@ -5,31 +5,31 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/EditTextCompromisso"
+        android:id="@+id/createCompromisso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Título do Compromisso"/>
 
     <EditText
-        android:id="@+id/Descricao"
+        android:id="@+id/createDescricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descrição do Compromisso" />
 
     <EditText
-        android:id="@+id/DataCompromisso"
+        android:id="@+id/createDataCompromisso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Data do Compromisso" />
 
     <EditText
-        android:id="@+id/PrioridadeCompromisso"
+        android:id="@+id/createPrioridadeCompromisso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Prioridade do Compromisso" />
 
     <CheckBox
-        android:id="@+id/checkBoxRealizado"
+        android:id="@+id/createCheckBoxRealizado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Foi realizado?" />

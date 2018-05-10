@@ -14,14 +14,14 @@ public class Agenda {
     private int id;
     private String nomeCompromisso;
     private String descricao;
-    private Long data;
+    private Date data;
     private String prioridade;
     private int flRealizado;
 
     public Agenda() {
     }
 
-    public Agenda(int id, String nomeCompromisso, String descricao, Long data, String prioridade, int flRealizado) {
+    public Agenda(int id, String nomeCompromisso, String descricao, Date data, String prioridade, int flRealizado) {
         this.id = id;
         this.nomeCompromisso = nomeCompromisso;
         this.descricao = descricao;
@@ -54,11 +54,11 @@ public class Agenda {
         this.descricao = descricao;
     }
 
-    public Long getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(Long data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
@@ -70,11 +70,11 @@ public class Agenda {
         this.prioridade = prioridade;
     }
 
-    public int getFlRealizado() {
+    public Integer getFlRealizado() {
         return flRealizado;
     }
 
-    public void setFlRealizado(int flRealizado) {
+    public void setFlRealizado(Integer flRealizado) {
         this.flRealizado = flRealizado;
     }
 }
