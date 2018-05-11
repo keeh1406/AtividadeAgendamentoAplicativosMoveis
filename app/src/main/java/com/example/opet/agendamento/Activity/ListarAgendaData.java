@@ -5,4 +5,5 @@ package com.example.opet.agendamento.Activity;
  */
 
 public class ListarAgendaData {
+
 }

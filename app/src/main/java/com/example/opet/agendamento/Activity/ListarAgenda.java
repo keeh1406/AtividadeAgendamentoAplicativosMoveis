@@ -25,13 +25,13 @@ public class ListarAgenda {
         listaAgenda = (ListView) findViewById(R.id.listaAgenda);
         agendaDAO = new AgendaDAO(this);
         List<Agenda> agendas = agendaDAO.carregaDadosLista();
-        myAdapter = new AgendaAdapter(this, R.layout.item_produto,produtos);
+        myAdapter = new AgendaAdapter(this, R.layout.item_agenda,agendas);
         listaAgenda.setAdapter(myAdapter);
         listaAgenda.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Agenda agenda = (Agenda) parent.getItemAtPosition(position);
-                Intent atualizarIntent = new Intent(ListarProdutosActivity.this,AtualizarAgenda.class);
+                Intent atualizarIntent = new Intent(ListarAgenda.this,AtualizarAgenda.class);
                 atualizarIntent.putExtra("ID",agenda.getID());
                 startActivity(atualizarIntent);
             }
