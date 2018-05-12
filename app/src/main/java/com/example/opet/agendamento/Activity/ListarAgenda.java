@@ -2,30 +2,40 @@ package com.example.opet.agendamento.Activity;
 
 import android.view.View;
 import android.widget.ListView;
-
+import android.content.Intent;
 import com.example.opet.agendamento.DAO.AgendaDAO;
 import com.example.opet.agendamento.Model.Agenda;
+import android.os.Bundle;
+import android.widget.AdapterView;
+import android.app.Activity;
+import java.util.List;
+import com.example.opet.agendamento.Adapter.AgendaAdapter;
+import com.example.opet.agendamento.R;
+
 
 /**
  * Created by opet on 09/05/2018.
  */
 
-public class ListarAgenda {
+public class ListarAgenda  extends Activity{
     private ListView listaAgenda;
+    private AgendaAdapter myAdapter;
     AgendaDAO agendaDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listar_produtos);
+        setContentView(R.layout.listar_agenda);
 
         carregarElementos();
     }
 
     public void carregarElementos(){
         listaAgenda = (ListView) findViewById(R.id.listaAgenda);
-        agendaDAO = new AgendaDAO(this);
-        List<Agenda> agendas = agendaDAO.carregaDadosLista();
-        myAdapter = new AgendaAdapter(this, R.layout.item_agenda,agendas);
+        AgendaDAO agendaDAO = null;
+
+        List<Agenda>loadAgendaByIds = agendaDAO.loadAgendaByIds(int[] agendaID);
+        myAdapter = new AgendaAdapter(this, R.layout.item_agenda,loadAgendaByIds);
         listaAgenda.setAdapter(myAdapter);
         listaAgenda.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

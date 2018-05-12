@@ -38,7 +38,7 @@ import java.text.SimpleDateFormat;
         }
 
         public void salvarAgenda(View v) throws ParseException {
-            AgendaDAO produtoDAO = new AgendaDAO(this);
+            AgendaDAO agendaDAO = new AgendaDAO(this);
             Agenda agenda = new Agenda();
             agenda.setNomeCompromisso(editCompromisso.getText().toString());
             agenda.setDescricao(editDescricao.getText().toString());

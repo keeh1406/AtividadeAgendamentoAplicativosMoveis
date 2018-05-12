@@ -22,7 +22,7 @@ import java.util.List;
         private int resource;
         private List<Agenda> agendas;
 
-        public Adapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Agenda> objects) {
+        public AgendaAdapter(Context context, int resource, List<Agenda> objects) {
             super(context, resource, objects);
             this.resource = resource;
             agendas = objects;

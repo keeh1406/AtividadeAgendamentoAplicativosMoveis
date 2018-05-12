@@ -5,31 +5,31 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/EditTextCompromisso"
+        android:id="@+id/textNomeCompromisso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
 
     <TextView
-        android:id="@+id/Descricao"
+        android:id="@+id/textDescricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
 
     <TextView
-        android:id="@+id/DataCompromisso"
+        android:id="@+id/textDataCompromisso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
 
     <TextView
-        android:id="@+id/PrioridadeCompromisso"
+        android:id="@+id/textPrioridadeCompromisso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
 
     <CheckBox
-        android:id="@+id/checkBoxRealizado"
+        android:id="@+id/textflRealizado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="false"

@@ -74,7 +74,7 @@ public class Agenda {
         return flRealizado;
     }
 
-    public void setFlRealizado(String flRealizado) {
+    public void setFlRealizado(int flRealizado) {
         this.flRealizado = flRealizado;
     }
 }

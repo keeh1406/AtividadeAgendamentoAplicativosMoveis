@@ -5,6 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
+import com.example.opet.agendamento.DAO.AgendaDAO;
 import com.example.opet.agendamento.Model.Agenda;
 
 /**
